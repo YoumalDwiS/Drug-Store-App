@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA6E9264-53DC-4C85-ADBF-13B0FF9C5775}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HaloTek</RootNamespace>
+    <AssemblyName>HaloTek</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatasetCustomer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetCustomer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetJabatan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetJabatan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetKategori.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetKategori.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLaporanPembelian.cs">
+      <DependentUpon>DataSetLaporanPembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLaporanPembelian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLaporanPembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLaporanPenjualan.cs">
+      <DependentUpon>DataSetLaporanPenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetLaporanPenjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLaporanPenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetObat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetObat.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetObat2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetObat2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetResep.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetResep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetSupplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetSupplier.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DBAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DBAdmin.Designer.cs">
+      <DependentUpon>Form_DBAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DBAdmin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DBAdmin1.Designer.cs">
+      <DependentUpon>Form_DBAdmin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DBKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DBKasir.Designer.cs">
+      <DependentUpon>Form_DBKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DBKepala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DBKepala.Designer.cs">
+      <DependentUpon>Form_DBKepala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_LPPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LPPembelian.Designer.cs">
+      <DependentUpon>Form_LPPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_LPPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_LPPenjualan.Designer.cs">
+      <DependentUpon>Form_LPPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MCustomer.Designer.cs">
+      <DependentUpon>Form_MCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MKategori.Designer.cs">
+      <DependentUpon>Form_MKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MObat.Designer.cs">
+      <DependentUpon>Form_MObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MResep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MResep.Designer.cs">
+      <DependentUpon>Form_MResep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MSupplier.Designer.cs">
+      <DependentUpon>Form_MSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MUser.Designer.cs">
+      <DependentUpon>Form_MUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TRPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TRPembelian.Designer.cs">
+      <DependentUpon>Form_TRPembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TRPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TRPenjualan.Designer.cs">
+      <DependentUpon>Form_TRPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form_DBAdmin.resx">
+      <DependentUpon>Form_DBAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DBAdmin1.resx">
+      <DependentUpon>Form_DBAdmin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DBKasir.resx">
+      <DependentUpon>Form_DBKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DBKepala.resx">
+      <DependentUpon>Form_DBKepala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LPPembelian.resx">
+      <DependentUpon>Form_LPPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_LPPenjualan.resx">
+      <DependentUpon>Form_LPPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MCustomer.resx">
+      <DependentUpon>Form_MCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MKategori.resx">
+      <DependentUpon>Form_MKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MObat.resx">
+      <DependentUpon>Form_MObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MResep.resx">
+      <DependentUpon>Form_MResep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MSupplier.resx">
+      <DependentUpon>Form_MSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MUser.resx">
+      <DependentUpon>Form_MUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TRPembelian.resx">
+      <DependentUpon>Form_TRPembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TRPenjualan.resx">
+      <DependentUpon>Form_TRPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaporanPembelian.rdlc" />
+    <EmbeddedResource Include="LaporanPenjualan.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DatasetCustomer.xsc">
+      <DependentUpon>DatasetCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetCustomer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetCustomer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetCustomer.xss">
+      <DependentUpon>DatasetCustomer.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetJabatan.xsc">
+      <DependentUpon>DataSetJabatan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetJabatan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetJabatan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetJabatan.xss">
+      <DependentUpon>DataSetJabatan.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetKategori.xsc">
+      <DependentUpon>DatasetKategori.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetKategori.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetKategori.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetKategori.xss">
+      <DependentUpon>DatasetKategori.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLaporanPembelian.xsc">
+      <DependentUpon>DataSetLaporanPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLaporanPembelian.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLaporanPembelian.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetLaporanPembelian.xss">
+      <DependentUpon>DataSetLaporanPembelian.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLaporanPenjualan.xsc">
+      <DependentUpon>DataSetLaporanPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetLaporanPenjualan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLaporanPenjualan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetLaporanPenjualan.xss">
+      <DependentUpon>DataSetLaporanPenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetObat.xsc">
+      <DependentUpon>DatasetObat.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetObat.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetObat.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetObat.xss">
+      <DependentUpon>DatasetObat.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetObat2.xsc">
+      <DependentUpon>DataSetObat2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetObat2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetObat2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetObat2.xss">
+      <DependentUpon>DataSetObat2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetResep.xsc">
+      <DependentUpon>DataSetResep.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetResep.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetResep.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetResep.xss">
+      <DependentUpon>DataSetResep.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetSupplier.xsc">
+      <DependentUpon>DatasetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetSupplier.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetSupplier.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetSupplier.xss">
+      <DependentUpon>DatasetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\HaloTek.DatasetObatTableAdapters.mObatTableAdapter.datasource" />
+    <None Include="Properties\DataSources\HaloTek.DatasetObatTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\HaloTek.DatasetObatTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Transaksi.png" />
+    <None Include="Resources\Icon_Logout %281%29.png" />
+    <None Include="Resources\Icon_Resep.png" />
+    <None Include="Resources\Icon_Kategori.png" />
+    <None Include="Resources\Icon_Obat.png" />
+    <None Include="Resources\Icon_Supplier.png" />
+    <None Include="Resources\Icon_Customer.png" />
+    <None Include="Resources\Icon_User.png" />
+    <None Include="Resources\Form_DBAdmin.jpg" />
+    <None Include="Resources\Form_DBAdmin1.jpg" />
+    <None Include="Resources\Form_Login1.jpg" />
+    <None Include="Resources\Form_Login.jpg" />
+    <None Include="Resources\Form_DBKasir.jpg" />
+    <None Include="Resources\Form_DBKepala.jpg" />
+    <None Include="Resources\Icon_Penjualan.png" />
+    <None Include="Resources\Icon_Pembelian.png" />
+    <None Include="Resources\Icon_Pendapatan.png" />
+    <None Include="Resources\Form_MUser.jpg" />
+    <None Include="Resources\Icon_Home.png" />
+    <None Include="Resources\Form_MCustomer.jpg" />
+    <None Include="Resources\Form_MSupplier.jpg" />
+    <None Include="Resources\Form_MKategori.jpg" />
+    <None Include="Resources\Form_MObat.jpg" />
+    <None Include="Resources\Form_MResep.jpg" />
+    <None Include="Resources\Form_TRPenjualan.jpg" />
+    <None Include="Resources\Form_TRPenjualan1.jpg" />
+    <None Include="Resources\Form_TRPembelian.jpg" />
+    <None Include="Resources\Form_LPPembelian.jpg" />
+    <None Include="Resources\Form_TRPenjualan11.jpg" />
+    <None Include="Resources\Form_LPPenjualan.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
